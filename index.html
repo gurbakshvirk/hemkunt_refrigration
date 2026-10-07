@@ -6,39 +6,143 @@
   <title>
     Hemkunt Refrigeration Services | AC Repair & Service in Ludhiana
   </title>
-  <meta
-    name="description"
-    content="Hemkunt Refrigeration Services provides AC repair, servicing, installation, shifting, gas filling and copper pipe work in Ludhiana."
-  />
+  <meta name="description"
+    content="Hemkunt Refrigeration Services provides AC repair, servicing, installation, shifting, gas filling and copper pipe work in Ludhiana." />
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+    rel="stylesheet" />
   <style>
     /* =====================================================
        ROOT
     ===================================================== */
     :root {
+      /* =====================================================
+     BRAND COLORS
+  ===================================================== */
+      --primary: #1687ff;
+      --primary-dark: #0877ee;
+      --primary-light: #43b8ff;
+      --accent: #6de7ff;
+      --accent-light: #8a8dff;
+      --success: #28d17c;
+      --success-light: #53e59a;
+      --warning: #ffca5f;
+      /* =====================================================
+     BACKGROUNDS
+  ===================================================== */
       --bg: #06111f;
       --bg-2: #091a2d;
+      --bg-3: #07192c;
       --surface: #0d2137;
-      --blue: #1687ff;
-      --blue-2: #43b8ff;
-      --cyan: #6de7ff;
-      --white: #ffffff;
+      --surface-light: #0b2845;
+      --footer-bg: #040b14;
+      /* =====================================================
+     TEXT COLORS
+  ===================================================== */
       --text: #dcecff;
-      --muted: #8fa7bd;
-      --border: rgba(255,255,255,.10);
-      --glass: rgba(255,255,255,.07);
-      --green: #28d17c;
-      --yellow: #ffca5f;
-      --container: 1180px;
+      --text-white: #ffffff;
+      --text-primary: #ffffff;
+      --text-secondary: #b9cce0;
+      --text-muted: #8fa7bd;
+      --text-muted-2: #8097ad;
+      --text-muted-3: #738ba0;
+      --text-blue: #52c7ff;
+      --text-cyan: #aeeeff;
+      /* =====================================================
+     BORDERS
+  ===================================================== */
+      --border: rgba(255, 255, 255, 0.10);
+      --border-light: rgba(255, 255, 255, 0.14);
+      --border-subtle: rgba(255, 255, 255, 0.07);
+      --border-hover: rgba(69, 183, 255, 0.35);
+      /* =====================================================
+     GLASS / TRANSPARENT SURFACES
+  ===================================================== */
+      --glass: rgba(255, 255, 255, 0.07);
+      --glass-light: rgba(255, 255, 255, 0.10);
+      --glass-dark: rgba(255, 255, 255, 0.035);
+      --glass-subtle: rgba(255, 255, 255, 0.025);
+      /* =====================================================
+     OVERLAYS
+  ===================================================== */
+      --overlay-dark: rgba(3, 14, 27, 0.95);
+      --overlay-medium: rgba(3, 15, 28, 0.55);
+      --overlay-light: rgba(3, 21, 40, 0.65);
+      --overlay-image: rgba(3, 21, 40, 0.05);
+      /* =====================================================
+     GRADIENTS
+  ===================================================== */
+      --gradient-primary:
+        linear-gradient(135deg,
+          #42c7ff,
+          #0877ee);
+      --gradient-brand:
+        linear-gradient(135deg,
+          #37b7ff,
+          #1264e8);
+      --gradient-text:
+        linear-gradient(100deg,
+          #6de7ff,
+          #238cff 60%,
+          #8a8dff);
+      --gradient-section:
+        linear-gradient(120deg,
+          #07192c,
+          #06111f);
+      --gradient-cta:
+        linear-gradient(120deg,
+          #0b6fd0,
+          #074a9d);
+      --gradient-glass:
+        linear-gradient(135deg,
+          rgba(255, 255, 255, 0.10),
+          rgba(255, 255, 255, 0.035));
+      /* =====================================================
+     BLUE / CYAN EFFECT COLORS
+  ===================================================== */
+      --blue-glow: #0077ff;
+      --cyan-glow: #00d9ff;
+      --blue-deep: #1262ff;
+      --blue-soft: rgba(22, 135, 255, 0.10);
+      --blue-shadow: rgba(22, 135, 255, 0.35);
+      --cyan-soft: rgba(109, 231, 255, 0.06);
+      --cyan-border: rgba(109, 231, 255, 0.18);
+      /* =====================================================
+     GREEN EFFECTS
+  ===================================================== */
+      --green-soft: rgba(40, 209, 124, 0.12);
+      --green-border: rgba(40, 209, 124, 0.20);
+      --green-shadow: rgba(40, 209, 124, 0.30);
+      --gradient-green:
+        linear-gradient(135deg,
+          #31df88,
+          #12a95e);
+      /* =====================================================
+     SHADOWS
+  ===================================================== */
       --shadow:
-        0 30px 80px rgba(0,0,0,.30);
+        0 30px 80px rgba(0, 0, 0, 0.30);
+      --shadow-card:
+        0 25px 60px rgba(0, 0, 0, 0.20);
+      --shadow-image:
+        0 40px 100px rgba(0, 0, 0, 0.40);
+      --shadow-soft:
+        0 20px 60px rgba(0, 0, 0, 0.18);
+      --shadow-button:
+        0 15px 35px rgba(12, 124, 239, 0.30);
+      --shadow-button-hover:
+        0 20px 45px rgba(12, 124, 239, 0.40);
+      /* =====================================================
+     LAYOUT
+  ===================================================== */
+      --container: 1180px;
       --radius: 24px;
+      --radius-lg: 30px;
+      --radius-md: 18px;
+      --radius-sm: 13px;
     }
     /* =====================================================
        RESET
@@ -126,18 +230,16 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 10px 0 18px;
-      border: 1px solid rgba(255,255,255,.10);
+      border: 1px solid rgba(255, 255, 255, .10);
       background:
-        linear-gradient(
-          120deg,
-          rgba(255,255,255,.10),
-          rgba(255,255,255,.035)
-        );
+        linear-gradient(120deg,
+          rgba(255, 255, 255, .10),
+          rgba(255, 255, 255, .035));
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-radius: 18px;
       box-shadow:
-        0 20px 60px rgba(0,0,0,.18);
+        0 20px 60px rgba(0, 0, 0, .18);
     }
     .brand {
       display: flex;
@@ -151,15 +253,13 @@
       place-items: center;
       border-radius: 13px;
       background:
-        linear-gradient(
-          135deg,
+        linear-gradient(135deg,
           #37b7ff,
-          #1264e8
-        );
+          #1264e8);
       color: white;
       font-size: 20px;
       box-shadow:
-        0 8px 25px rgba(22,135,255,.35);
+        0 8px 25px rgba(22, 135, 255, .35);
     }
     .brand-text strong {
       display: block;
@@ -227,8 +327,8 @@
       align-items: center;
       gap: 9px;
       padding: 8px 13px;
-      border: 1px solid rgba(109,231,255,.18);
-      background: rgba(109,231,255,.06);
+      border: 1px solid rgba(109, 231, 255, .18);
+      background: rgba(109, 231, 255, .06);
       border-radius: 100px;
       color: #aeeeff;
       font-size: 14px;
@@ -241,7 +341,7 @@
       border-radius: 50%;
       background: var(--green);
       box-shadow:
-        0 0 0 5px rgba(40,209,124,.12);
+        0 0 0 5px rgba(40, 209, 124, .12);
     }
     .hero h1 {
       font-family: "Manrope";
@@ -253,12 +353,10 @@
     }
     .gradient-text {
       background:
-        linear-gradient(
-          100deg,
+        linear-gradient(100deg,
           #6de7ff,
           #238cff 60%,
-          #8a8dff
-        );
+          #8a8dff);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -290,28 +388,26 @@
     }
     .btn-primary {
       background:
-        linear-gradient(
-          135deg,
+        linear-gradient(135deg,
           #42c7ff,
-          #0877ee
-        );
+          #0877ee);
       color: white;
       box-shadow:
-        0 15px 35px rgba(12,124,239,.30);
+        0 15px 35px rgba(12, 124, 239, .30);
     }
     .btn-primary:hover {
       transform: translateY(-3px);
       box-shadow:
-        0 20px 45px rgba(12,124,239,.40);
+        0 20px 45px rgba(12, 124, 239, .40);
     }
     .btn-glass {
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: rgba(255, 255, 255, .06);
       color: white;
       backdrop-filter: blur(12px);
     }
     .btn-glass:hover {
-      background: rgba(255,255,255,.10);
+      background: rgba(255, 255, 255, .10);
       transform: translateY(-3px);
     }
     .hero-trust {
@@ -341,9 +437,9 @@
       height: 550px;
       object-fit: cover;
       border-radius: 32px;
-      border: 1px solid rgba(255,255,255,.14);
+      border: 1px solid rgba(255, 255, 255, .14);
       box-shadow:
-        0 40px 100px rgba(0,0,0,.40);
+        0 40px 100px rgba(0, 0, 0, .40);
     }
     .hero-image::after {
       content: "";
@@ -355,11 +451,9 @@
       height: 550px;
       border-radius: 32px;
       background:
-        linear-gradient(
-          180deg,
-          rgba(3,21,40,.05),
-          rgba(3,21,40,.65)
-        );
+        linear-gradient(180deg,
+          rgba(3, 21, 40, .05),
+          rgba(3, 21, 40, .65));
       pointer-events: none;
     }
     .floating-card {
@@ -369,18 +463,16 @@
       bottom: 80px;
       width: 245px;
       padding: 18px;
-      border: 1px solid rgba(255,255,255,.14);
+      border: 1px solid rgba(255, 255, 255, .14);
       background:
-        linear-gradient(
-          135deg,
-          rgba(255,255,255,.13),
-          rgba(255,255,255,.04)
-        );
+        linear-gradient(135deg,
+          rgba(255, 255, 255, .13),
+          rgba(255, 255, 255, .04));
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-radius: 20px;
       box-shadow:
-        0 25px 60px rgba(0,0,0,.30);
+        0 25px 60px rgba(0, 0, 0, .30);
     }
     .floating-top {
       display: flex;
@@ -393,8 +485,8 @@
       height: 38px;
       display: grid;
       place-items: center;
-      background: rgba(40,209,124,.12);
-      border: 1px solid rgba(40,209,124,.20);
+      background: rgba(40, 209, 124, .12);
+      border: 1px solid rgba(40, 209, 124, .20);
       border-radius: 11px;
       color: #53e59a;
     }
@@ -421,9 +513,9 @@
        MARQUEE
     ===================================================== */
     .marquee {
-      border-top: 1px solid rgba(255,255,255,.07);
-      border-bottom: 1px solid rgba(255,255,255,.07);
-      background: rgba(255,255,255,.025);
+      border-top: 1px solid rgba(255, 255, 255, .07);
+      border-bottom: 1px solid rgba(255, 255, 255, .07);
+      background: rgba(255, 255, 255, .025);
       overflow: hidden;
     }
     .marquee-track {
@@ -492,12 +584,9 @@
     .services-grid {
       display: grid;
       grid-template-columns:
-        1.25fr
-        .75fr
-        .75fr;
+        1.25fr .75fr .75fr;
       grid-template-rows:
-        270px
-        270px;
+        270px 270px;
       gap: 16px;
     }
     .service-card {
@@ -507,20 +596,18 @@
       border-radius: var(--radius);
       border: 1px solid var(--border);
       background:
-        linear-gradient(
-          135deg,
-          rgba(255,255,255,.075),
-          rgba(255,255,255,.025)
-        );
+        linear-gradient(135deg,
+          rgba(255, 255, 255, .075),
+          rgba(255, 255, 255, .025));
       backdrop-filter: blur(15px);
       transition: .35s;
     }
     .service-card:hover {
       transform: translateY(-7px);
       border-color:
-        rgba(69,183,255,.35);
+        rgba(69, 183, 255, .35);
       box-shadow:
-        0 25px 60px rgba(0,0,0,.20);
+        0 25px 60px rgba(0, 0, 0, .20);
     }
     .service-card.large {
       grid-row: span 2;
@@ -530,7 +617,7 @@
       position: absolute;
       top: 20px;
       right: 22px;
-      color: rgba(255,255,255,.18);
+      color: rgba(255, 255, 255, .18);
       font-family: "Manrope";
       font-size: 13px;
       font-weight: 800;
@@ -542,12 +629,10 @@
       place-items: center;
       border-radius: 16px;
       background:
-        linear-gradient(
-          135deg,
-          rgba(50,186,255,.20),
-          rgba(30,100,255,.08)
-        );
-      border: 1px solid rgba(67,184,255,.16);
+        linear-gradient(135deg,
+          rgba(50, 186, 255, .20),
+          rgba(30, 100, 255, .08));
+      border: 1px solid rgba(67, 184, 255, .16);
       color: #55caff;
       font-size: 23px;
       margin-bottom: 25px;
@@ -578,23 +663,19 @@
       border-radius: 25px;
       opacity: .50;
       mask-image:
-        linear-gradient(
-          90deg,
+        linear-gradient(90deg,
           transparent,
-          black 45%
-        );
+          black 45%);
     }
     /* =====================================================
        ABOUT
     ===================================================== */
     .about {
       background:
-        linear-gradient(
-          180deg,
+        linear-gradient(180deg,
           transparent,
-          rgba(15,100,180,.04),
-          transparent
-        );
+          rgba(15, 100, 180, .04),
+          transparent);
     }
     .about-grid {
       display: grid;
@@ -611,7 +692,7 @@
       border-radius: 30px;
       border: 1px solid var(--border);
       box-shadow:
-        0 35px 80px rgba(0,0,0,.30);
+        0 35px 80px rgba(0, 0, 0, .30);
     }
     .about-image::after {
       content: "";
@@ -619,7 +700,7 @@
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      border: 1px solid rgba(70,193,255,.30);
+      border: 1px solid rgba(70, 193, 255, .30);
       right: -40px;
       bottom: -40px;
       z-index: -1;
@@ -631,7 +712,7 @@
       letter-spacing: -2px;
       margin-bottom: 20px;
     }
-    .about-content > p {
+    .about-content>p {
       color: var(--muted);
       font-size: 15px;
       line-height: 1.8;
@@ -649,7 +730,7 @@
       padding: 16px;
       border: 1px solid var(--border);
       border-radius: 15px;
-      background: rgba(255,255,255,.035);
+      background: rgba(255, 255, 255, .035);
     }
     .feature-icon {
       width: 36px;
@@ -658,7 +739,7 @@
       display: grid;
       place-items: center;
       border-radius: 10px;
-      background: rgba(22,135,255,.10);
+      background: rgba(22, 135, 255, .10);
       color: #49bfff;
     }
     .feature strong {
@@ -707,11 +788,9 @@
       align-items: end;
       padding: 30px;
       background:
-        linear-gradient(
-          0deg,
-          rgba(3,14,27,.95),
-          rgba(3,14,27,.10)
-        );
+        linear-gradient(0deg,
+          rgba(3, 14, 27, .95),
+          rgba(3, 14, 27, .10));
     }
     .type-content h3 {
       font-family: "Manrope";
@@ -728,13 +807,11 @@
     .process {
       position: relative;
       background:
-        linear-gradient(
-          120deg,
+        linear-gradient(120deg,
           #07192c,
-          #06111f
-        );
-      border-top: 1px solid rgba(255,255,255,.05);
-      border-bottom: 1px solid rgba(255,255,255,.05);
+          #06111f);
+      border-top: 1px solid rgba(255, 255, 255, .05);
+      border-bottom: 1px solid rgba(255, 255, 255, .05);
     }
     .process-grid {
       display: grid;
@@ -747,7 +824,7 @@
       padding: 27px;
       border-radius: 20px;
       background:
-        rgba(255,255,255,.04);
+        rgba(255, 255, 255, .04);
       border: 1px solid var(--border);
     }
     .process-card::after {
@@ -780,242 +857,142 @@
       font-size: 13px;
       line-height: 1.7;
     }
-
     /* =====================================================
    COPPER PIPE SECTION
 ===================================================== */
-
-.copper-section {
-  padding-top: 40px;
-}
-
-.copper-grid {
-  display: grid;
-
-  grid-template-columns: .9fr 1.1fr;
-
-  gap: 75px;
-
-  align-items: center;
-
-  padding: 55px;
-
-  border-radius: 30px;
-
-  background:
-    radial-gradient(
-      circle at 0% 100%,
-      rgba(28,145,255,.12),
-      transparent 40%
-    ),
-    linear-gradient(
-      135deg,
-      rgba(255,255,255,.07),
-      rgba(255,255,255,.025)
-    );
-
-  border: 1px solid rgba(255,255,255,.09);
-
-  box-shadow:
-    0 30px 80px rgba(0,0,0,.18);
-}
-
-
-.copper-image-wrap {
-  position: relative;
-}
-
-
-.copper-image {
-  width: 100%;
-  height: 430px;
-
-  object-fit: cover;
-
-  border-radius: 24px;
-
-  border: 1px solid rgba(255,255,255,.12);
-
-  box-shadow:
-    0 25px 60px rgba(0,0,0,.30);
-}
-
-
-.copper-image-wrap::after {
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  border-radius: 24px;
-
-  background:
-    linear-gradient(
-      180deg,
-      transparent 50%,
-      rgba(3,15,28,.55)
-    );
-
-  pointer-events: none;
-}
-
-
-.copper-floating {
-  position: absolute;
-
-  z-index: 2;
-
-  left: 20px;
-  bottom: 20px;
-
-  display: flex;
-  align-items: center;
-
-  gap: 12px;
-
-  padding: 15px 18px;
-
-  border-radius: 15px;
-
-  background:
-    rgba(7,24,42,.78);
-
-  border: 1px solid rgba(255,255,255,.13);
-
-  backdrop-filter: blur(18px);
-
-  box-shadow:
-    0 15px 40px rgba(0,0,0,.30);
-}
-
-
-.copper-check {
-  width: 36px;
-  height: 36px;
-
-  display: grid;
-  place-items: center;
-
-  border-radius: 10px;
-
-  background:
-    rgba(40,209,124,.12);
-
-  color: #53e59a;
-
-  font-weight: 800;
-}
-
-
-.copper-floating strong {
-  display: block;
-
-  color: white;
-
-  font-size: 13px;
-}
-
-
-.copper-floating span {
-  display: block;
-
-  color: #8fa8bd;
-
-  font-size: 13px;
-
-  margin-top: 2px;
-}
-
-
-.copper-content h2 span {
-  display: block;
-
-  background:
-    linear-gradient(
-      100deg,
-      #6de7ff,
-      #258fff
-    );
-
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  color: transparent;
-}
-
-
-.copper-content > p {
-  color: #91a8bc;
-
-  font-size: 16px;
-
-  line-height: 1.8;
-
-  max-width: 600px;
-
-  margin: 20px 0 30px;
-}
-
-
-.copper-features {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 13px;
-
-  margin-bottom: 32px;
-}
-
-
-.copper-features > div {
-  padding: 18px;
-
-  border-radius: 15px;
-
-  border: 1px solid rgba(255,255,255,.08);
-
-  background:
-    rgba(255,255,255,.035);
-}
-
-
-.copper-features span {
-  display: block;
-
-  color: #42baff;
-
-  font-size: 10px;
-
-  font-weight: 800;
-
-  letter-spacing: 1px;
-
-  margin-bottom: 8px;
-}
-
-
-.copper-features strong {
-  display: block;
-
-  color: white;
-
-  font-family: "Manrope";
-
-  font-size: 14px;
-
-  margin-bottom: 5px;
-}
-
-
-.copper-features p {
-  color: #7e95aa;
-
-  font-size: 14px;
-
-  line-height: 1.6;
-}
+    .copper-section {
+      padding-top: 40px;
+    }
+    .copper-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 75px;
+      align-items: center;
+      padding: 55px;
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at 0% 100%,
+          rgba(28, 145, 255, .12),
+          transparent 40%),
+        linear-gradient(135deg,
+          rgba(255, 255, 255, .07),
+          rgba(255, 255, 255, .025));
+      border: 1px solid rgba(255, 255, 255, .09);
+      box-shadow:
+        0 30px 80px rgba(0, 0, 0, .18);
+    }
+    .copper-image-wrap {
+      position: relative;
+    }
+    .copper-image {
+      width: 100%;
+      height: 430px;
+      object-fit: cover;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      box-shadow:
+        0 25px 60px rgba(0, 0, 0, .30);
+    }
+    .copper-image-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 24px;
+      background:
+        linear-gradient(180deg,
+          transparent 50%,
+          rgba(3, 15, 28, .55));
+      pointer-events: none;
+    }
+    .copper-floating {
+      position: absolute;
+      z-index: 2;
+      left: 20px;
+      bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 15px 18px;
+      border-radius: 15px;
+      background:
+        rgba(7, 24, 42, .78);
+      border: 1px solid rgba(255, 255, 255, .13);
+      backdrop-filter: blur(18px);
+      box-shadow:
+        0 15px 40px rgba(0, 0, 0, .30);
+    }
+    .copper-check {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background:
+        rgba(40, 209, 124, .12);
+      color: #53e59a;
+      font-weight: 800;
+    }
+    .copper-floating strong {
+      display: block;
+      color: white;
+      font-size: 13px;
+    }
+    .copper-floating span {
+      display: block;
+      color: #8fa8bd;
+      font-size: 13px;
+      margin-top: 2px;
+    }
+    .copper-content h2 span {
+      display: block;
+      background:
+        linear-gradient(100deg,
+          #6de7ff,
+          #258fff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .copper-content>p {
+      color: #91a8bc;
+      font-size: 16px;
+      line-height: 1.8;
+      max-width: 600px;
+      margin: 20px 0 30px;
+    }
+    .copper-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 13px;
+      margin-bottom: 32px;
+    }
+    .copper-features>div {
+      padding: 18px;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, .08);
+      background:
+        rgba(255, 255, 255, .035);
+    }
+    .copper-features span {
+      display: block;
+      color: #42baff;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .copper-features strong {
+      display: block;
+      color: white;
+      font-family: "Manrope";
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .copper-features p {
+      color: #7e95aa;
+      font-size: 14px;
+      line-height: 1.6;
+    }
     /* =====================================================
        AREAS
     ===================================================== */
@@ -1025,17 +1002,13 @@
       padding: 55px;
       border-radius: 30px;
       background:
-        radial-gradient(
-          circle at 100% 0%,
-          rgba(37,160,255,.18),
-          transparent 40%
-        ),
-        linear-gradient(
-          135deg,
+        radial-gradient(circle at 100% 0%,
+          rgba(37, 160, 255, .18),
+          transparent 40%),
+        linear-gradient(135deg,
           #0b2845,
-          #08192b
-        );
-      border: 1px solid rgba(255,255,255,.09);
+          #08192b);
+      border: 1px solid rgba(255, 255, 255, .09);
     }
     .areas-content {
       max-width: 570px;
@@ -1054,8 +1027,8 @@
     .area-tag {
       padding: 11px 15px;
       border-radius: 100px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.09);
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .09);
       color: #bcd3e7;
       font-size: 13px;
       font-weight: 600;
@@ -1074,19 +1047,15 @@
       padding: 65px;
       border-radius: 30px;
       background:
-        radial-gradient(
-          circle at 85% 20%,
-          rgba(91,226,255,.28),
-          transparent 30%
-        ),
-        linear-gradient(
-          120deg,
+        radial-gradient(circle at 85% 20%,
+          rgba(91, 226, 255, .28),
+          transparent 30%),
+        linear-gradient(120deg,
           #0b6fd0,
-          #074a9d
-        );
-      border: 1px solid rgba(255,255,255,.12);
+          #074a9d);
+      border: 1px solid rgba(255, 255, 255, .12);
       box-shadow:
-        0 35px 90px rgba(0,0,0,.25);
+        0 35px 90px rgba(0, 0, 0, .25);
     }
     .cta::before {
       content: "";
@@ -1094,7 +1063,7 @@
       width: 400px;
       height: 400px;
       border-radius: 50%;
-      border: 1px solid rgba(255,255,255,.10);
+      border: 1px solid rgba(255, 255, 255, .10);
       right: -150px;
       top: -200px;
     }
@@ -1136,7 +1105,7 @@
     footer {
       padding: 45px 0 25px;
       background: #040b14;
-      border-top: 1px solid rgba(255,255,255,.06);
+      border-top: 1px solid rgba(255, 255, 255, .06);
     }
     .footer-grid {
       display: grid;
@@ -1162,7 +1131,7 @@
     }
     .footer-bottom {
       padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,.06);
+      border-top: 1px solid rgba(255, 255, 255, .06);
       display: flex;
       justify-content: space-between;
       gap: 20px;
@@ -1181,29 +1150,27 @@
       place-items: center;
       border-radius: 50%;
       background:
-        linear-gradient(
-          135deg,
+        linear-gradient(135deg,
           #31df88,
-          #12a95e
-        );
+          #12a95e);
       color: white;
       font-size: 22px;
       box-shadow:
-        0 15px 40px rgba(40,209,124,.30);
+        0 15px 40px rgba(40, 209, 124, .30);
       animation: callPulse 2.2s infinite;
     }
     @keyframes callPulse {
       0% {
         box-shadow:
-          0 0 0 0 rgba(40,209,124,.30);
+          0 0 0 0 rgba(40, 209, 124, .30);
       }
       70% {
         box-shadow:
-          0 0 0 15px rgba(40,209,124,0);
+          0 0 0 15px rgba(40, 209, 124, 0);
       }
       100% {
         box-shadow:
-          0 0 0 0 rgba(40,209,124,0);
+          0 0 0 0 rgba(40, 209, 124, 0);
       }
     }
     /* =====================================================
@@ -1250,37 +1217,26 @@
       }
     }
     @media(max-width: 900px) {
-
-  .copper-grid {
-    grid-template-columns: 1fr;
-
-    gap: 40px;
-
-    padding: 30px;
-  }
-
-  .copper-image {
-    height: 380px;
-  }
-
-}
-
-
-@media(max-width: 600px) {
-
-  .copper-grid {
-    padding: 22px;
-  }
-
-  .copper-image {
-    height: 300px;
-  }
-
-  .copper-features {
-    grid-template-columns: 1fr;
-  }
-
-}
+      .copper-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 30px;
+      }
+      .copper-image {
+        height: 380px;
+      }
+    }
+    @media(max-width: 600px) {
+      .copper-grid {
+        padding: 22px;
+      }
+      .copper-image {
+        height: 300px;
+      }
+      .copper-features {
+        grid-template-columns: 1fr;
+      }
+    }
     @media(max-width: 700px) {
       .container {
         width: min(100% - 28px, 600px);
@@ -1434,11 +1390,8 @@
             Areas
           </a>
         </nav>
-        <a
-          href="tel:+919815987542"
-          class="header-call"
-        >
-          ☎ +919815987542
+        <a href="tel:+919815987542" class="header-call">
+          ☎ 9815987542
         </a>
       </div>
     </div>
@@ -1470,16 +1423,10 @@
               Ludhiana.
             </p>
             <div class="hero-actions">
-              <a
-                href="tel:+919815987542"
-                class="btn btn-primary"
-              >
+              <a href="tel:+919815987542" class="btn btn-primary">
                 ☎ Call for AC Service
               </a>
-              <a
-                href="#services"
-                class="btn btn-glass"
-              >
+              <a href="#services" class="btn btn-glass">
                 Explore Services →
               </a>
             </div>
@@ -1496,11 +1443,7 @@
           </div>
           <!-- HERO IMAGE -->
           <div class="hero-visual">
-            <img
-              class="hero-image"
-              src="https://www.surefixappliance.in/_next/image?q=75&url=%2Ftech-working.png&w=1920"
-              alt="AC technician servicing an air conditioner"
-            />
+            <img class="hero-image" src="assets/hero-image.png" alt="AC technician servicing an air conditioner" />
             <div class="image-overlay"></div>
             <div class="floating-card">
               <div class="floating-top">
@@ -1621,11 +1564,7 @@
               We provide AC repair services for common Split
               and Window AC problems.
             </p>
-            <img
-              class="service-image"
-              src="https://technicianstoolkit.com/images/hero-ac-repair.jpg"
-              alt=""
-            />
+            <img class="service-image" src="assets/small-card.png" alt="" />
           </article>
           <article class="service-card">
             <span class="service-number">
@@ -1712,11 +1651,7 @@
       <div class="container">
         <div class="about-grid">
           <div class="about-image">
-            <img
-              src="https://www.applianceservicekolkata.in/_next/image?q=75&url=%2Fhero%2Fac-technician.png&w=3840"
-              alt="Professional technician repairing split AC"
-              loading="lazy"
-            />
+            <img src="assets/local-image.png" alt="Professional technician repairing split AC" loading="lazy" />
           </div>
           <div class="about-content">
             <div class="eyebrow">
@@ -1787,10 +1722,7 @@
                 </div>
               </div>
             </div>
-            <a
-              href="tel:+919815987542"
-              class="btn btn-primary"
-            >
+            <a href="tel:+919815987542" class="btn btn-primary">
               ☎ Talk to Hemkunt
             </a>
           </div>
@@ -1815,11 +1747,7 @@
         </div>
         <div class="types-grid">
           <div class="type-card">
-            <img
-              src="https://technicianstoolkit.com/images/hero-ac-repair.jpg"
-              alt="Split AC servicing"
-              loading="lazy"
-            />
+            <img src="assets/small-card.png" alt="Split AC servicing" loading="lazy" />
             <div class="type-overlay">
               <div class="type-content">
                 <h3>
@@ -1832,11 +1760,7 @@
             </div>
           </div>
           <div class="type-card">
-            <img
-              src="https://www.surefixappliance.in/_next/image?q=75&url=%2Ftech-working.png&w=1920"
-              alt="AC technician service"
-              loading="lazy"
-            />
+            <img src="assets/hero-image.png" alt="AC technician service" loading="lazy" />
             <div class="type-overlay">
               <div class="type-content">
                 <h3>
@@ -1962,112 +1886,76 @@
         </div>
       </div>
     </section>
-
-
-
     <section class="copper-section">
-
-  <div class="container">
-
-    <div class="copper-grid">
-
-      <div class="copper-image-wrap">
-
-        <img
-          src="https://img.vevorstatic.com/us/KDLJTG50FT386YXZYV0/original_img-v2/mini-split-line-set-m100-1.12.jpg?format=webp&timestamp=1710472106000"
-          alt="AC copper pipe fitting and refrigerant line installation"
-          class="copper-image"
-          loading="lazy"
-        />
-
-        <div class="copper-floating">
-
-          <span class="copper-check">✓</span>
-
-          <div>
-            <strong>Precision Fitting</strong>
-            <span>Copper lines & connections</span>
+      <div class="container">
+        <div class="copper-grid">
+          <div class="copper-image-wrap">
+            <img
+              src="https://img.vevorstatic.com/us/KDLJTG50FT386YXZYV0/original_img-v2/mini-split-line-set-m100-1.12.jpg?format=webp&timestamp=1710472106000"
+              alt="AC copper pipe fitting and refrigerant line installation" class="copper-image" loading="lazy" />
+            <div class="copper-floating">
+              <span class="copper-check">✓</span>
+              <div>
+                <strong>Precision Fitting</strong>
+                <span>Copper lines & connections</span>
+              </div>
+            </div>
           </div>
-
+          <div class="copper-content">
+            <div class="eyebrow">
+              Copper Pipe Work
+            </div>
+            <h2 class="section-title">
+              Proper copper
+              <span>fitting matters.</span>
+            </h2>
+            <p>
+              Need new copper piping for your AC installation?
+              We provide copper pipe fitting and replacement
+              for Split AC systems, including the required
+              connections between indoor and outdoor units.
+            </p>
+            <div class="copper-features">
+              <div>
+                <span>01</span>
+                <strong>New Copper Fitting</strong>
+                <p>
+                  New copper line installation for AC setup
+                  and shifting requirements.
+                </p>
+              </div>
+              <div>
+                <span>02</span>
+                <strong>Pipe Replacement</strong>
+                <p>
+                  Replacement of damaged or unsuitable
+                  copper lines.
+                </p>
+              </div>
+              <div>
+                <span>03</span>
+                <strong>Proper Connections</strong>
+                <p>
+                  Clean and secure connections between
+                  AC components.
+                </p>
+              </div>
+              <div>
+                <span>04</span>
+                <strong>Insulated Lines</strong>
+                <p>
+                  Proper insulation around refrigerant
+                  piping where required.
+                </p>
+              </div>
+            </div>
+            <a href="tel:+919815987542" class="btn btn-primary">
+              ☎ Ask About Copper Fitting
+            </a>
+          </div>
         </div>
-
       </div>
-
-
-      <div class="copper-content">
-
-        <div class="eyebrow">
-          Copper Pipe Work
-        </div>
-
-        <h2 class="section-title">
-          Proper copper
-          <span>fitting matters.</span>
-        </h2>
-
-        <p>
-          Need new copper piping for your AC installation?
-          We provide copper pipe fitting and replacement
-          for Split AC systems, including the required
-          connections between indoor and outdoor units.
-        </p>
-
-
-        <div class="copper-features">
-
-          <div>
-            <span>01</span>
-            <strong>New Copper Fitting</strong>
-            <p>
-              New copper line installation for AC setup
-              and shifting requirements.
-            </p>
-          </div>
-
-          <div>
-            <span>02</span>
-            <strong>Pipe Replacement</strong>
-            <p>
-              Replacement of damaged or unsuitable
-              copper lines.
-            </p>
-          </div>
-
-          <div>
-            <span>03</span>
-            <strong>Proper Connections</strong>
-            <p>
-              Clean and secure connections between
-              AC components.
-            </p>
-          </div>
-
-          <div>
-            <span>04</span>
-            <strong>Insulated Lines</strong>
-            <p>
-              Proper insulation around refrigerant
-              piping where required.
-            </p>
-          </div>
-
-        </div>
-
-
-        <a
-          href="tel:+919815987542"
-          class="btn btn-primary"
-        >
-          ☎ Ask About Copper Fitting
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
+    </section>
     <!-- =====================================================
          CTA
     ===================================================== -->
@@ -2089,16 +1977,10 @@
               </p>
             </div>
             <div class="cta-phone">
-              <a
-                href="tel:+919815987542"
-                class="phone-number"
-              >
+              <a href="tel:+919815987542" class="phone-number">
                 +919815987542
               </a>
-              <a
-                href="tel:+919815987542"
-                class="btn btn-glass"
-              >
+              <a href="tel:+919815987542" class="btn btn-glass">
                 ☎ Call Now
               </a>
             </div>
@@ -2183,11 +2065,7 @@
   <!-- =====================================================
        FLOATING CALL
   ===================================================== -->
-  <a
-    href="tel:+919815987542"
-    class="floating-call"
-    aria-label="Call Hemkunt Refrigeration Services"
-  >
+  <a href="tel:+919815987542" class="floating-call" aria-label="Call Hemkunt Refrigeration Services">
     ☎
   </a>
   <script>
